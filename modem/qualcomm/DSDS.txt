@@ -1,0 +1,6 @@
+都处于idle时，两个都可以监听电话
+
+“Designated” Data Subscription (DDS)可以通过UI来设置用哪个卡来做数据业务，设置完后，手机只有一个卡做ps附着，另外一个只做cs attach
+
+一个处于打电话时，另一个处于oos
+主sub处于数据业务时，如果tune-away功能打开了，则，另一个卡可以监听电话，否则不行

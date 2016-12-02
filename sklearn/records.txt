@@ -1,0 +1,15 @@
+Pipeline 
+pipeline = Pipeline([("features", combined_features), ("svm", svm)]) 
+将要顺序执行的操作放来一个列表里，列表里的每个操作的参数可以通过操作名加参数名来更改
+grid_search = GridSearchCV(pipeline, param_grid=param_grid, verbose=10) 参数的取值可以有多个，具体哪个最优可以通过这种方式来测试
+调用fit就可以执行，
+
+FeatureUnion：用不同的函数抽取多个特征时，可以并行抽取，放入一列表里，最后每一个函数抽取的数组连接起来。
+
+feature_extraction.DictVectorizer([dtype, ...])	Transforms lists of feature-value mappings to vectors.
+
+CountVectorizer：对文本进行词频统计，使用的是稀疏矩阵的存储方式，一个文档可以表示为一个数组，一个特征对应一个词，一个词对应数组里的一个整数索引
+get_feature_names()可以获取整个特征空间的名字
+vectorizer.vocabulary_.get('document')：vocabulary_里保存了特征到index的映射
+
+TfidfTransformer用来计算TF-IDF，而TfidfVectorizer是CountVectorizer和TfidfTransformer的一个功能连接

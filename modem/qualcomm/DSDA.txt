@@ -1,0 +1,17 @@
+一个打电话，一个可以监听进来的电话，如果要接听进来的电话，则之前的电话要挂起
+Set NV 70266 to 2 (DSDA)
+Set NV 4398 to 0
+Set NV 6876 -> dual_Standby_pref to 5
+Set NV 6907 to 1
+
+6907 (NV_UIM_HW_SIM_CONFIG)
+■ Sets SIM hardware configuration
+– 0 (default) – Single-SIM hardware
+– 1 – Dual-SIM hardware
+6876 (NV_DUAL_STANDBY_CONFIG_ITEMS)
+■ Sets Dual Standby preference
+■ Dedicated voice subs
+■ Dedicated data subs
+■ Active subs
+■ Priority subs
+■ Dual Standby preference
