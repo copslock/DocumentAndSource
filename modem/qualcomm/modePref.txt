@@ -1,0 +1,13 @@
+ÅÐ¶ÏËÑË÷µÄÍøÂçÀàÐÍ
+as your analysis ,the mode pref is not correct, in your log, UE camp on lte for CMCC card, acquire GSM for CT card, 
+
+MSG        [00005/02] Call Manager/High                 12:51:51.809                 cmph.c  15941  =CM= DSDX: ds1 mode_pref=63 ///////CT card
+MSG        [00005/02] Call Manager/High                 12:51:51.809                 cmph.c  15941  =CM= DSDX: ds3 mode_pref=62 //////CMCC card
+
+//CMCC card on lte
+MSG        [00015/02] CDMA System Determination/High    12:51:51.823                sdcmd.c  05561  =SD= <<<< Returned Action=16384, ss=3 <<<<
+MSG        [00015/02] CDMA System Determination/High    12:51:51.823                 sdss.c  19415  =SD= ACQ_GWL:sys_mode = 9 band_cap = 0x1e0 0x2000015
+
+//CT card acquire GSM
+MSG        [00015/02] CDMA System Determination/High    12:51:53.827                sdcmd.c  05561  =SD= <<<< Returned Action=16384, ss=0 <<<<
+MSG        [00015/02] CDMA System Determination/High    12:51:53.827                 sdss.c  19415  =SD= ACQ_GWL:sys_mode = 3 band_cap = 0x0 0x280180

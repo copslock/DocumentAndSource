@@ -13,3 +13,6 @@ get_feature_names()可以获取整个特征空间的名字
 vectorizer.vocabulary_.get('document')：vocabulary_里保存了特征到index的映射
 
 TfidfTransformer用来计算TF-IDF，而TfidfVectorizer是CountVectorizer和TfidfTransformer的一个功能连接
+
+HashingVectorizer：将每一个特征映射到整数index，且不能回退，所以在内存中没有一个映射词典，这样可以减少空间的占用，同时采用稀疏矩阵保存
+n_features，表示最大可以有多少个特征
