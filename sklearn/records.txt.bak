@@ -12,4 +12,7 @@ CountVectorizer£º¶ÔÎÄ±¾½øĞĞ´ÊÆµÍ³¼Æ£¬Ê¹ÓÃµÄÊÇÏ¡Êè¾ØÕóµÄ´æ´¢·½Ê½£¬Ò»¸öÎÄµµ¿ÉÒÔ±íÊ
 get_feature_names()¿ÉÒÔ»ñÈ¡Õû¸öÌØÕ÷¿Õ¼äµÄÃû×Ö
 vectorizer.vocabulary_.get('document')£ºvocabulary_Àï±£´æÁËÌØÕ÷µ½indexµÄÓ³Éä
 
-TfidfTransformerÓÃÀ´¼ÆËãTF-IDF£¬¶øTfidfVectorizerÊÇCountVectorizerºÍTfidfTransformerµÄÒ»¸öÁ¬½Ó
+TfidfTransformerÓÃÀ´¼ÆËãTF-IDF£¬¶øTfidfVectorizerÊÇCountVectorizerºÍTfidfTransformerµÄÒ»¸ö¹¦ÄÜÁ¬½Ó
+
+HashingVectorizer£º½«Ã¿Ò»¸öÌØÕ÷Ó³Éäµ½ÕûÊıindex£¬ÇÒ²»ÄÜ»ØÍË£¬ËùÒÔÔÚÄÚ´æÖĞÃ»ÓĞÒ»¸öÓ³Éä´Êµä£¬ÕâÑù¿ÉÒÔ¼õÉÙ¿Õ¼äµÄÕ¼ÓÃ£¬Í¬Ê±²ÉÓÃÏ¡Êè¾ØÕó±£´æ
+n_features

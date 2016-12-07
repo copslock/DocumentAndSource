@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+while ($line = <>){
+    if ($line =~ m/^. \./){
+	print("Punct .");
+    }
+    else {
+	print("$line");
+    }
+}

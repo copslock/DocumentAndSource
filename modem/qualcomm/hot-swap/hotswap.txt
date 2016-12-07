@@ -1,0 +1,24 @@
+1.Please check your HW first，whether your HW can work normally? 
+When card inserted and removed, this should have Level(UIM_DET_signal) changes 
+
+2.Please check PlatformIO_xxx.xml in path \modem_proc\core\systemdrivers\tlmm\config\msmxxxx, if contain below code: 
+If no, please add it. 这里设置用来检测卡存在的GPIO口
+<props name="uim1_present" type="TLMMGpioIdType">{54, 1}</props> 
+<props name="uim2_present" type="TLMMGpioIdType">{58, 1}</props> 
+
+
+3.Please check your UIM_DET_signal active low or active high when card insertion in your HW design with your HW engineer. 
+Those info will impact the NV70210 configuration. 当卡插入时，会来一个高电平还是低电平，NV需要根据这个来配置
+
+For active high in your HW: 
+You should set NV70210 as follow, 
+hw_config.uim[0].ENABLE_UIM_HOTSWAP: TRUE 
+hw_config.UIM[0].UIM_HOTSWAP_POLARITY: ACTIVE_HIGH 
+hw_config.UIM[0].UIM_CARD_DETECT_GPIO_FUNC_SELECTION:1 
+hw_config.UIM[0].UIM_CARD_DETECT_GPIO_DRV_STRENGTH: 2MA 
+
+For active low in your HW: 
+hw_config.uim[0].ENABLE_UIM_HOTSWAP: TRUE 
+hw_config.UIM[0].UIM_HOTSWAP_POLARITY: ACTIVE_LOW 
+hw_config.UIM[0].UIM_CARD_DETECT_GPIO_FUNC_SELECTION:1 
+hw_config.UIM[0].UIM_CARD_DETECT_GPIO_DRV_STRENGTH: 2MA 
